@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="assets/favicon.ico" rel="shortcut icon" />
+  <link rel="stylesheet" href="css/owfont-regular.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>momentum</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="player-links">
+      <div class="player show">
+        <audio class="audio" src="assets/sounds/Aqua Caelestis.mp3"></audio>
+        <div class="player-controls">
+          <button class="play-prev player-icon"></button>
+          <button class="play player-icon"></button>
+          <button class="play-next player-icon"></button>
+        </div>
+        <div class="song-name">
+          <p class="current-song"></p>
+        </div>
+        <div class="progress_container">
+          <div class="progress"></div>
+        </div>
+        <div class="song-time">
+          <p class="current-time"></p> /
+          <p class="duration">00:39</p>
+        </div>
+        <input class="range" min="0" max="100" value="0" type="range">
+        <img class="sound-img" width="20px" height="20px" src="assets/img/sound.png" alt="">
+        <div class="song_information">
+        </div>
+        <ul class="play-list">
+          <li class="play-item">Aqua Caelestis</li>
+          <li class="play-item">Ennio Morricone</li>
+          <li class="play-item">River Flows In You</li>
+          <li class="play-item">Summer Wind</li>
+        </ul>
+      </div>
+      <p class="links-press">Links</p>
+    </div>
+    <div class="links hide">
+      <ul class="links-list">
+        <li><a class="links-list-item" href="chrome-search://local-ntp/local-ntp.html">Chrome Tab</a><img class="trash" height="20px" width="20px" src="assets/img/trash.svg" alt=""></li>
+        <li><a class="links-list-item" href="chrome://apps">Apps</a><img class="trash" height="20px" width="20px" src="assets/img/trash.svg" alt=""></li>
+      </ul>
+      <div class="links-footer">
+        <div class="links-plus"><img height="18px" width="18px" src="assets/img/plus-60.png" alt=""></div>
+        <p class="links-new">New Link</p>
+      </div>
+    </div>
+    <div class="links-add hide">
+      <div class="arrow"><img class="arrow-back" width="18px" height="18px" src="assets/img/back-arrow.svg" alt=""></div>
+      <div class="form__group field">
+       <input type="input" class="links-name form__field form__field__links" placeholder="Name" name="name" id='name' required />
+       <label for="name" class="form__label">Name</label>
+     </div>
+     <div class="form__group field">
+      <input type="input" class="links-link form__field form__field__links" placeholder="Name" name="name" id='name' required />
+      <label for="name" class="form__label">Links</label>
+    </div>
+    <button class="links-button">Create</button>
+     </div>
+    <div class="weather show">
+      <input type="text" placeholder="Minsk" class="city" />
+      <i class="weather-icon owf"><img src="" alt=""></i>
+      <div class="weather-error"></div>
+      <div class="description-container">
+        <span class="temperature"></span>
+        <span class="weather-description"></span>
+      </div>
+      <div class="wind"></div>
+      <div class="humidity"></div>
+    </div>
+  </header>
+  <main class="main">
+    <div class="slider-icons">
+      <button class="slide-prev slider-icon"></button>
+      <button class="slide-next slider-icon"></button>
+    </div>
+    <time class="time show">
+      <div class="timer__block">
+        <span id="hours"></span>
+      </div>
+      <div class="timer__block">
+        <span id="minutes"></span>
+      </div>
+      <div class="timer__block">
+        <span id="seconds"></span>
+      </div>
+    </time>
+    <date class="date show">
+
+    </date>
+    <div class="greeting-container show">
+      <span class="greeting">
+
+      </span>
+      <input type="text" class="l-name name" placeholder="[Enter name]" />
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="quote-container show">
+      <button class="change-quote"></button>
+      <div class="quote"></div>
+      <div class="author"></div>
+    </div>
+
+    <div class="settings hide">
+      <div class="language">
+        <h3 class="l-lang">Language</h3>
+        <div class="language-block">
+          <div class="language-english">
+            <img width="20px" height="20px" src="assets/img/UK.svg" alt="">
+            <p class="l-en en">en</p>
+          </div>
+          <div class="language-russian">
+            <img width="20px" height="20px" src="assets/img/russia.svg" alt="">
+            <p class="l-ru ru">ru</p>
+          </div>
+        </div>
+      </div>
+      <div class="source">
+        <h3 class="l-sources">Sources</h3>
+        <div class="source-list">
+          <div class="source-item">
+            <img width="20px" height="20px" src="assets/img/github.svg" alt="">
+            <p class="github">GitHub</p>
+          </div>
+          <div class="source-item">
+            <img width="20px" height="20px" src="assets/img/unsplash.svg" alt="">
+            <p class="unsplash">Unsplash API</p>
+          </div>
+          <div class="source-item">
+            <img width="20px" height="20px" src="assets/img/flickr.svg" alt="">
+            <p class="flickr">Flickr API</p>
+          </div>
+        </div>
+        <div class="form__group field">
+          <input type="input" class="form__field" placeholder="Name" name="name" id='name' required />
+          <label for="name" class="l-tag form__label"></label>
+        </div>
+      </div>
+      <div class="delete">
+        <h3 class="l-deleteoradd">Delete or Add</h3>
+        <div class="delete-container">
+          <div class="delete-list">
+            <div class="source-item">
+              <p class="l-time delete-time press-time">Time</p>
+            </div>
+            <div class="source-item">
+              <p class="l-date delete-date press-date">Date</p>
+            </div>
+            <div class="source-item">
+              <p class="l-greeting delete-greeting press-greeting">Greeting</p>
+            </div>
+            <div class="source-item">
+              <p class="l-quote delete-quote press-quote">Quote</p>
+            </div>
+          </div>
+          <div class="delete-list">
+            <div class="source-item">
+              <p class="l-weather delete-weather press-weather">Weather</p>
+            </div>
+            <div class="source-item">
+              <p class="l-audio delete-audio press-audio">Audio</p>
+            </div>
+            <div class="source-item">
+              <p class="l-links delete-links press-links">Links</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="settings-press">
+      <img class="settings-icon" width="30px" height="30px" src="assets/img/settings.svg" alt="">
+    </div>
+    <div class="select_lang">
+      <select class="change-lang" name="" id="">
+        <option value="en">EN</option>
+        <option value="ru">RU</option>
+      </select>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>
